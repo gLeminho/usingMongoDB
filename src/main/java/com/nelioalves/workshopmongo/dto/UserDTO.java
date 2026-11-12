@@ -2,8 +2,10 @@ package com.nelioalves.workshopmongo.dto;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.nelioalves.workshopmongo.domain.User;
 
+@JsonPropertyOrder({ "id", "name", "email" }) // para manter a ordem dos campos no Postman
 public class UserDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
